@@ -1,14 +1,7 @@
 ﻿using Ex_8;
-
-
-namespace Ex_8;
-static class Program
-{
-    static void Main()
-    {
-        var dataNascimento = new DateTime(15, 9, 1984);
-        Pessoa pessoa = new Pessoa ("Carlos",dataNascimento);
-        pessoa.MostrarIdade();
-    }
-}
+    string NomePessoa="Rafael";
+    DateTime DataDeNascimento= new DateTime (1984,09,15);
+    Pessoa pessoa = new Pessoa(NomePessoa,DataDeNascimento);
+    pessoa.MostrarIdade();
+     
 

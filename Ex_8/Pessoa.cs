@@ -8,32 +8,28 @@ namespace Ex_8
     public class Pessoa
     {
         public string NomePessoa { get; set; }
-        DateTime DataDeNascimento { get; set; }
-        public int idade {get; set;}
-
-
+        public DateTime DataDeNascimento { get; set; }
         public Pessoa(string nomePessoa, DateTime dataDeNascimento)
         {
-            this.NomePessoa=nomePessoa;
-            this.DataDeNascimento=dataDeNascimento;
-        }
-        private void CalcularIdade()
-        {
-            var dataNascimento = new DateTime();
-            var dataAtual = DateTime.Now;
-            var idade = dataAtual.Year - dataNascimento.Year;
-                if (dataNascimento > dataAtual.AddYears(-idade))
-                    {
-                        idade--;
-                    }
-
-
+            NomePessoa=nomePessoa;
+            DataDeNascimento=dataDeNascimento;
         }
         public void MostrarIdade()
         {
-            CalcularIdade();
+            int idade = CalcularIdade();
             Console.WriteLine($"Nome {NomePessoa}, tem a idade {idade}");
-        }
+        } 
+        private int CalcularIdade()
+        {
+                var dataAtual = DateTime.Now;
+                var idade = dataAtual.Year - DataDeNascimento.Year;
+                if (DataDeNascimento > dataAtual.AddYears(-idade))
+                    {
+                        idade--;
+                    }
+                    return idade;
 
+        }
+       
     }
 }

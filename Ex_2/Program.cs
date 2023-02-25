@@ -4,7 +4,7 @@ public class Program
 {
    public static void Main (string[] args)
     {
-        DateTime nascimento = new DateTime(1990, 10, 30, 16, 30,00);
+        DateTime nascimento = new DateTime(1990, 10, 30);
         FichaInscricao fichaInscricao = new FichaInscricao (1,"Manoel",nascimento,true);
         fichaInscricao.imprimirDados();
     }
